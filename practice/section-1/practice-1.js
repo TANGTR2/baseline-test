@@ -1,12 +1,16 @@
 'use strict';
 
 function collectSameElements(collectionA, collectionB) {
-  for(var i=0;i<collectionA.length;i++){
+  var same=new Array();
+	var num=0;
+	 for(var i=0;i<collectionA.length;i++){
 		    for(var j=0;j<collectionB.length;j++){
-		      if(collectionA[i]==collectionB[j])
-		        document.write(collectionA[i] + "<br>");
+		      if(collectionA[i]==collectionB[j]){
+		    	 same[num]=collectionA[i];
+		    	 num++;
+		      } 
 		      else continue;
 		    }
-	}
-  return '实现练习要求，并改写该行代码。';
+		  }
+  return same[num];
 }
